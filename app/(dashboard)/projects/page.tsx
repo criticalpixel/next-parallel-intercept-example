@@ -7,6 +7,9 @@ export default function Page() {
       <pre className="text-xl rounded-md">[/projects] Projects</pre>
       <p>Go back before hitting second url</p>
       <ul role="list" className="mt-4 text-sm divide-y divide-slate-600">
+        <li className="py-1">
+          <Link href={"/admin/create?x=000"}>intercept create</Link>
+        </li>
         {interceptRoutes.map((item, index) => (
           <li key={item.name + index} className="py-1">
             INTERCEPT : <Link href={item.href}>{item.name}</Link>
