@@ -1,3 +1,3 @@
 export default function Default() {
-  return <>imagine this is null </>;
+  return <>default for not found </>;
 }

@@ -1,3 +1,14 @@
-export default function Page({ params }: { params: { id: string } }) {
-  return <>INTERCEPTED [@Sidepanel/team] (..)admin/edit/[{params.id}]</>;
+export default function Page({
+  params,
+  searchParams,
+}: {
+  params: { id: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+}) {
+  return (
+    <>
+      INTERCEPTED [@Sidepanel/team] (..)admin/edit/[{params.id}] ?{" "}
+      {JSON.stringify(searchParams)}
+    </>
+  );
 }
